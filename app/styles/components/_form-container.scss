@@ -1,0 +1,23 @@
+.form-container {
+  align-items: center;
+  background: $color__grey--medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 50px 30px;
+  width: 640px;
+
+  @include mobile {
+    justify-content: flex-start;
+    height: 100%;
+    padding: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+.form-container_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}

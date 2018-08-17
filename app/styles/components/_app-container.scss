@@ -1,0 +1,12 @@
+.app-container {
+  align-items: center;
+  background: $color__white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+
+  @include mobile {
+    padding: 0;
+    width: 100%;
+  }
+}

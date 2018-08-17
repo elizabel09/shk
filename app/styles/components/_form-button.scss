@@ -1,0 +1,27 @@
+.form-button {
+  background: $color__grey--light;
+  border: 0;
+  border-radius: 2px;
+  color: $color__black;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: $font-weight__bold;
+  line-height: 18px;
+  max-width: 100%;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.form-button--disabled {
+  background: $color__grey !important;
+  cursor: not-allowed;
+}
+
+.form-button--submit {
+  background: $color__green;
+}

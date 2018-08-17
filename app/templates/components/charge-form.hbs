@@ -1,0 +1,74 @@
+{{#form-container
+  isDisabled=charge._content.isSaving
+  submitAction=(action 'save')
+  as |form-container|}}
+
+  <div class="charge-form__image">
+    <img src="{{charge.operator.imageUrl}}">
+  </div>
+
+  {{#form-container.form-label
+    error=charge.error.operator.validation
+    text=(t 'form.label.operator')
+  }}
+    {{#form-container.input-select
+      triggerId='chargeOperatorField'
+      options=operators
+      onchange=(action (mut charge.operator))
+      placeholder=(t 'form.placeholder.operator')
+      searchEnabled=false
+      selected=charge.operator
+      as |operator|
+    }}
+      {{operator.name}}
+    {{/form-container.input-select}}
+  {{/form-container.form-label}}
+
+  {{#form-container.form-label
+    error=charge.error.phone.validation
+    text=(t 'form.label.phone')
+  }}
+    {{form-container.input-mask
+      id='chargePhoneField'
+      mask='+7(999)-999-99-99'
+      options=(hash showMaskOnHover=false)
+      placeholder=(t 'form.placeholder.phone')
+      update=(action 'setPhone')
+      value=charge.phone
+    }}
+  {{/form-container.form-label}}
+
+  {{#form-container.form-label
+    error=charge.error.amount.validation
+    text=(t 'form.label.amount')
+  }}
+    {{form-container.input-mask
+      id='chargeAmountField'
+      mask='[9999]'
+      options=(hash greedy=false showMaskOnHover=false showMaskOnFocus=false)
+      placeholder=(t 'form.placeholder.amount')
+      update=(action (mut charge.amount))
+      value=charge.amount
+    }}
+  {{/form-container.form-label}}
+
+
+  {{#form-container.form-error text=saveError}}
+    {{saveError}}
+  {{/form-container.form-error}}
+
+  <div class="form-container_row">
+    {{form-container.form-button
+      click=(action 'back')
+      id='chargeBackButton'
+      value=(t 'form.button.back')
+    }}
+
+    {{form-container.form-submit
+      id='chargeSubmitButton'
+      value=(t 'form.button.pay')
+    }}
+  </div>
+
+
+{{/form-container}}

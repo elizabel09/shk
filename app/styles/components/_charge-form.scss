@@ -1,0 +1,22 @@
+.charge-form {
+  align-items: center;
+  background: $color__grey--medium;
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    justify-content: flex-start;
+    height: 100%;
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+
+.charge-form__image {
+  margin: 5px;
+  min-height: 120px;
+
+  img {
+    height: fit-content;
+  }
+}

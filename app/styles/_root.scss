@@ -1,0 +1,36 @@
+:root {
+  background: $color__white;
+  box-sizing: border-box;
+  color: $color__black;
+  font-family: $font-family__default;
+  font-size: $font-size__default;
+  height: 100%;
+  line-height: $line-height__default;
+  width: 100%;
+}
+
+::placeholder {
+  color: $color__grey;
+}
+
+a,
+label,
+[data-ember-action] {
+  cursor: pointer;
+}
+
+body {
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  width: inherit;
+
+  > .ember-view {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,12 @@
+<div class="operators-list">
+  <h2 class="operators-list__title">
+    {{t 'operators.list.title'}}
+  </h2>
+  <div class="operators-list__items">
+    {{#each operators as |operator|}}
+      {{#link-to 'operators.charge' operator.id id=operator.code class='operators-list__item'}}
+        <img src="{{operator.imageUrl}}" class="operators-list__item-image">
+      {{/link-to}}
+    {{/each}}
+  </div>
+</div>

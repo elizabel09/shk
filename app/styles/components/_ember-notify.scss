@@ -1,0 +1,15 @@
+.ember-notify-cn {
+  position: fixed;
+  z-index: 5000;
+  top: 30px;
+  right: 50px;
+  height: 60px;
+}
+
+.ember-notify.success {
+  background: $color__green;
+}
+
+.ember-notify.warning {
+  background: $color__red--light;
+}

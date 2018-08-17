@@ -1,0 +1,8 @@
+{
+  "predef": [
+    "server",
+    "document",
+    "window",
+    "location"
+  ]
+}

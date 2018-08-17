@@ -1,0 +1,26 @@
+.form-label {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+
+  > * {
+    flex: 0 0 auto;
+  }
+}
+
+.form-label__label {
+  display: block;
+  font-size: 12px;
+  font-weight: $font-weight__bold;
+  margin: 0 0 5px;
+  overflow: hidden;
+  user-select: text;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.form-label--error {
+  color: $color__red;
+}

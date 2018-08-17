@@ -1,0 +1,22 @@
+{{yield (hash
+  form-button=(component 'form-button'
+    disabled=isDisabled
+    value=buttonText
+  )
+  form-error=(component 'form-error'
+    text=errorText
+  )
+  form-label=(component 'form-label'
+  )
+  form-submit=(component 'form-submit'
+    clickTask=submitTask
+    disabled=isDisabled
+    value=submitText
+  )
+  input-select=(component 'power-select'
+    disabled=isDisabled
+  )
+  input-mask=(component 'form-input-mask'
+    disabled=isDisabled
+  )
+)}}

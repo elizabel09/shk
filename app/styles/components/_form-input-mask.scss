@@ -1,0 +1,12 @@
+.form-input-mask {
+  border: 1px solid $color__grey;
+  font-size: $font-size__default;
+  line-height: 30px;
+  min-width: 200px;
+  padding: 5px;
+}
+
+.form-input-mask--disabled {
+  background: $color__grey--medium !important;
+  cursor: not-allowed;
+}
